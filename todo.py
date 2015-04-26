@@ -53,3 +53,9 @@ class TodoManager:
 		todoList[tid] = todo
 		with open(TODO_FILENAME, 'w') as f:
 			json.dump(todoList, f)
+
+	def delTodo(self,tid):
+		todoList[tid] = ''
+		with open(TODO_FILENAME, 'w') as f:
+			json.dump(todoList, f)
+
